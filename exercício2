@@ -1,0 +1,47 @@
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class CalculadoraTeste {
+
+    @Test
+    public void testSomar() {
+        Calculadora calculadora = new Calculadora();
+        double resultado = calculadora.somar(5, 3);
+        assertEquals(8, resultado, 0); // Verifica se o resultado da soma é 8
+    }
+
+    @Test
+    public void testSubtrair() {
+        Calculadora calculadora = new Calculadora();
+        double resultado = calculadora.subtrair(5, 3);
+        assertEquals(2, resultado, 0); // Verifica se o resultado da subtração é 2
+    }
+
+    @Test
+    public void testMultiplicar() {
+        Calculadora calculadora = new Calculadora();
+        double resultado = calculadora.multiplicar(5, 3);
+        assertEquals(15, resultado, 0); // Verifica se o resultado da multiplicação é 15
+    }
+
+    @Test
+    public void testDividir() {
+        Calculadora calculadora = new Calculadora();
+        double resultado = calculadora.dividir(6, 3);
+        assertEquals(2, resultado, 0); // Verifica se o resultado da divisão é 2
+    }
+
+    @Test
+    public void testDividirPorZero() {
+        Calculadora calculadora = new Calculadora();
+        double resultado = calculadora.dividir(6, 0);
+        assertEquals(Double.NaN, resultado, 0); // Verifica se o resultado da divisão por zero é NaN
+    }
+
+    @Test
+    public void testPotenciar() {
+        Calculadora calculadora = new Calculadora();
+        double resultado = calculadora.potenciar(2, 3);
+        assertEquals(8, resultado, 0); // Verifica se o resultado da potenciação é 8
+    }
+}
