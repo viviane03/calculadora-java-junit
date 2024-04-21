@@ -13,3 +13,4 @@ CalculadoraTeste.java: Classe de testes unitários para testar os métodos da ca
 README.md: Este arquivo que contém informações sobre o projeto.
 .gitignore: Arquivo de configuração do Git para especificar quais arquivos e diretórios devem ser ignorados durante o versionamento.
 Arquivo de licença: Especifica os termos sob os quais o código-fonte está disponível.
+
