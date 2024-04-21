@@ -1,0 +1,55 @@
+public class Calculadora {
+    // Método para somar dois números
+    public double somar(double numeroUm, double numeroDois) {
+        return numeroUm + numeroDois;
+    }
+
+    // Método para subtrair dois números
+    public double subtrair(double numeroUm, double numeroDois) {
+        return numeroUm - numeroDois;
+    }
+
+    // Método para multiplicar dois números
+    public double multiplicar(double numeroUm, double numeroDois) {
+        return numeroUm * numeroDois;
+    }
+
+    // Método para dividir dois números
+    public double dividir(double numeroUm, double numeroDois) {
+        // Verifica se o divisor é diferente de zero para evitar divisão por zero
+        if (numeroDois != 0) {
+            return numeroUm / numeroDois;
+        } else {
+            // Retorna um valor inválido se houver divisão por zero
+            System.out.println("Erro: Divisão por zero!");
+            return Double.NaN; // Retorna um valor representando "Não é um número"
+        }
+    }
+
+    // Método para potenciar um número pelo outro
+    public double potenciar(double base, double expoente) {
+        return Math.pow(base, expoente);
+    }
+
+    // Método principal para testar a calculadora
+    public static void main(String[] args) {
+        // Criando uma instância da classe Calculadora
+        Calculadora calculadora = new Calculadora();
+
+        // Testando os métodos da calculadora
+        double resultadoSoma = calculadora.somar(5, 3);
+        System.out.println("5 + 3 = " + resultadoSoma);
+
+        double resultadoSubtracao = calculadora.subtrair(5, 3);
+        System.out.println("5 - 3 = " + resultadoSubtracao);
+
+        double resultadoMultiplicacao = calculadora.multiplicar(5, 3);
+        System.out.println("5 * 3 = " + resultadoMultiplicacao);
+
+        double resultadoDivisao = calculadora.dividir(5, 3);
+        System.out.println("5 / 3 = " + resultadoDivisao);
+
+        double resultadoPotenciacao = calculadora.potenciar(5, 3);
+        System.out.println("5 ^ 3 = " + resultadoPotenciacao);
+    }
+}
